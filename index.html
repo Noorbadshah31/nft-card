@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: hsl(217, 54%, 11%);
+      font-family: outfit;
+    }
+
+    section {
+      background-color: hsl(216, 50%, 16%);
+      width: 345px;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section>* {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    section .images {
+      position: relative;
+      border-radius: 10px;
+      height: 345px;
+      background-color: aqua;
+    }
+
+    section .images .first {
+      width: 100%;
+      position: relative;
+      height: 345px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    section .images .second {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -25px;
+      margin-top: -20px;
+    }
+
+    section .images .first:hover {
+      z-index: 0;
+      opacity: 65%;
+      transition: opacity .5s;
+      cursor: pointer;
+    }
+    section .images .second:hover>section .images .first{
+      opacity: 65%;
+      transition: opacity .5s;
+      cursor: pointer;
+    }
+
+
+
+
+
+
+
+    section>h1 {
+      color: white;
+    }
+
+    section>h1:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+    section p {
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+
+    }
+
+    .p1 {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .p2 {
+      color: hsl(215, 51%, 70%)
+    }
+
+    .etherium-price {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .etherium {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .etherium img {
+      height: 20px;
+    }
+
+    .etherium>* {
+      margin: 0;
+    }
+
+    .creator {
+      display: flex;
+      gap: 20px
+    }
+
+    .creator img {
+      height: 50px;
+    }
+
+    .creator span {
+      color: rgba(255, 255, 255, 0.99);
+    }
+
+    .creator span:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+    hr {
+      border-color: hsl(215, 51%, 70%);
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="images">
+      <img class="first" src="./images/image-equilibrium.jpg" alt="">
+      <img class="second" src="./images/icon-view.svg" alt="">
+    </div>
+
+    <h1>Equilibrium #3429</h1>
+
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="etherium-price">
+      <div class="etherium">
+        <img src="./images/icon-ethereum.svg" alt="icon etherium">
+        <p class="p1">0.041 ETH</p>
+      </div>
+      <div class="etherium">
+        <img src="./images/icon-clock.svg" alt="">
+        <p class="p2"> 3 days left</p>
+      </div>
+    </div>
+    <hr>
+    <div class="creator">
+      <img src="./images/image-avatar.png" alt="">
+      <p> Creation of <span>Jules Wyvern</span></p>
+    </div>
+  </section>
+</body>
+
+</html>
